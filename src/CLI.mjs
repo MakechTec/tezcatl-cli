@@ -1,8 +1,5 @@
-import Pattern from "./pattern/Pattern.mjs";
-import Argument from "./Argument.mjs";
 import {argv, cwd} from "node:process";
 import fs from "node:fs";
-import {ARGUMENT_FLAG} from "./constants/constants.mjs";
 
 export const CLI = {
     getArgumentValue: function(name, params = argv) {
@@ -37,3 +34,4 @@ export const CLI = {
 };
 
 export default CLI;
+

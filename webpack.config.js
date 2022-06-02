@@ -2,13 +2,10 @@ const path = require('path');
 
 module.exports = {
     mode: 'production',
-    entry: {
-        action: "./src/Action.mjs",
-        pipe: "./src/Pipe.mjs",
-    },
+    entry: "./prebuild/cli.mjs",
     output: {
         path: path.resolve(__dirname),
-        filename: "[name].js",
+        filename: "index.js",
         library:{
             type: "commonjs-static",
         }
@@ -29,4 +26,5 @@ module.exports = {
             }
         ],
     },
+    target: "node",
 };
