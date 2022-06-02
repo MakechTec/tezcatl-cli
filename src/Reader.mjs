@@ -9,9 +9,7 @@ export const Reader = {
             return "";
         }
 
-        let templatePath = this.getTemplatePath(templateName);
-
-        return fs.readFileSync(templatePath, "utf8");
+        return fs.readFileSync(templateName, "utf8");
         
     },
     changePlaceholders: function(content, placeholders) {
