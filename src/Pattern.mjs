@@ -23,4 +23,8 @@ export const Pattern = {
         let pattern = new RegExp("\\$\\{" + placeholder.name + "\\}", "g");
         return content.replace(pattern, placeholder.value);
     },
+    countMatches: (str, pattern) => {
+        const re = new RegExp(pattern, 'g');
+        return ((str || '').match(re) || []).length
+    }
 };
