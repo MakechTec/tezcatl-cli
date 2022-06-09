@@ -4,8 +4,14 @@ import fs from "node:fs";
 export const CLI = {
     getArgumentValue: function(name, params = argv) {
         let nameParam = params.find((param) => Pattern.testArg(name, param));
-        let value = nameParam.split("=")[1]
-        return new Argument(name, value);
+
+        if(nameParam === undefined) {
+            return new Argument(name, "");
+        }
+        else{
+            let value = nameParam.split("=")[1]
+            return new Argument(name, value);
+        }
     },
     getArgumentsGroup: function(prefix, params = argv) {
         return params.filter( (param) => Pattern.testArg(prefix, param))
