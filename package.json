@@ -6,9 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": {
-    "tezcatl-cli": "bin/index.mjs"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/angeldomp49/tezcatl-cli.git"
