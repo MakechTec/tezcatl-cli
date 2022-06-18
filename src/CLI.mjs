@@ -38,6 +38,3 @@ export const CLI = {
                             })
     }
 };
-
-export default CLI;
-

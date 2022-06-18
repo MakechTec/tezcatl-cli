@@ -1,11 +1,14 @@
 
 export const Reader = {
 
+    readTemplate: function(templateName){
+        this.read(templateName);
+    },
 
-    readTemplate: function(templateName) {
+    read: function(templateName) {
 
         if(! fs.existsSync(templateName)){
-            console.error("Template directory not found for: "+ cwd());
+            console.error("file not found in : "+ templateName);
             return "";
         }
 
@@ -19,6 +22,9 @@ export const Reader = {
             newContent = Pattern.replacePlaceholder(newContent, placeholder);
         });
         return newContent;
+    },
+    readConfig: function(configName) {
+
     }
 }
 
