@@ -1,3 +1,3 @@
-import CLI from "../index.js";
+import {Writter} from "../index.js";
 
-console.log(CLI);
+Writter.insertInLine("test/f.tzl", 3, "testing");

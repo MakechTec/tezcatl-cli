@@ -16,6 +16,8 @@ export const Writter = {
     },
     insertInLine: function(fileName, lineNumber, text){
 
+        lineNumber = lineNumber-1;
+
         if(Pattern.testHasDirectory(fileName)){
             let pointer = fileName.lastIndexOf("/");
             let directory = fileName.substring(0, pointer);
@@ -23,9 +25,9 @@ export const Writter = {
         }
 
         let originalText = fs.readFileSync(fileName, 'utf8');
-        let lines = originalText.split("\n");
-        let newLines = lines.splice(lineNumber, 0, text);
-        let newText = newLines.join("\n");
+        let lines = originalText.split(/\r?\n/);
+        lines.splice(lineNumber, 0, text);
+        let newText = lines.join("\n");
 
         fs.writeFileSync(fileName, newText);
 
