@@ -2,7 +2,7 @@
 export const Reader = {
 
     readTemplate: function(templateName){
-        this.read(templateName);
+        return this.read(templateName);
     },
 
     read: function(templateName) {
@@ -22,9 +22,6 @@ export const Reader = {
             newContent = Pattern.replacePlaceholder(newContent, placeholder);
         });
         return newContent;
-    },
-    readConfig: function(configName) {
-
     }
 }
 
