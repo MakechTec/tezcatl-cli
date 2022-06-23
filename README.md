@@ -1,5 +1,7 @@
 # Tezcatl CLI #
 
+This module is a low level API, which is used to interact with the command line arguments. And with some file actions.
+
 <hr/>
 <br/>
 <br/>
