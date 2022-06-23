@@ -2,12 +2,11 @@
 
 This module is a low level API, which is used to interact with the command line arguments. And with some file actions.
 
-<hr/>
-<br/>
-<br/>
-<br/>
-<h3 style="color:#012A68">Argument Class</h3>
-<br/>
+### installation ###
+
+    $ npm install @makechtec/tezcatl-cli
+
+### Argument Class ###
 
     export class Argument{
         constructor(name, value){
@@ -16,21 +15,11 @@ This module is a low level API, which is used to interact with the command line 
         }
     }
 
-<hr/>
-<br/>
-<br/>
-<br/>
-<h3 style="color:#012A68">Constants</h3>
-<br/>
+### Constants ###
 
     export const ARGUMENT_FLAG = "--";
 
-<hr/>
-<br/>
-<br/>
-<br/>
-<h3 style="color:#012A68">Pattern Object</h3>
-<br/>
+### Pattern Object ###
 
     testStart(search, target) : booelean
 
@@ -60,12 +49,7 @@ replace the placeholder name in all matches inside the content with the value of
 
 count the number of matches of the pattern in the string
 
-<hr/>
-<br/>
-<br/>
-<br/>
-<h3 style="color:#012A68">Reader Object</h3>
-<br/>
+### Reader Object ###
 
     readTemplate(templateName) : string
 
@@ -79,12 +63,7 @@ read the template file
 
 replace the placeholder name in all matches inside the content with the value of the placeholder for each item in the placeholders array
 
-<hr/>
-<br/>
-<br/>
-<br/>
-<h3 style="color:#012A68">Writter Object</h3>
-<br/>
+### Writter Object ###
 
     writeFile(fileName, content) : void
 
@@ -98,12 +77,7 @@ create the directory
 
 insert the text in the line number of the file
 
-<hr/>
-<br/>
-<br/>
-<br/>
-<h3 style="color:#012A68">CLI Object</h3>
-<br/>
+### CLI Object ###
 
     getArgumentValue(name, params = argv) : Argument
 
