@@ -1,3 +1,5 @@
-import {Writter} from "../index.js";
+import {CLI} from "../index.js";
+import {argv} from "node:process";
 
-Writter.insertInLine("test/f.tzl", 3, "testing");
+console.log(CLI.isFlag("export"));
+console.log(argv);
